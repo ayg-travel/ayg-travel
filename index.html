@@ -74,6 +74,24 @@ nav{
     position:relative;
 }
 
+
+}<!-- RUNNING TITLE -->
+
+<div class="running-text">
+    <div class="ticker">
+        <span>
+            <span class="sign">✦</span>
+            Welcome to Our Website
+            <span class="sign">✦</span>
+            Latest Offers Available Now
+            <span class="sign">✦</span>
+            Fast • Responsive • Modern
+            <span class="sign">✦</span>
+        </span>
+    </div>
+</div>
+
+<style>
 /* RUNNING TITLE */
 
 .running-text{
@@ -81,16 +99,61 @@ nav{
     overflow:hidden;
     white-space:nowrap;
     margin-bottom:80px;
+    background:#ffcc00;
+    padding:14px 0;
+    border-top:3px solid #000;
+    border-bottom:3px solid #000;
 }
 
-.running-text h1{
+.ticker{
     display:inline-block;
-    font-size:4rem;
-    color:#0b6cff;
+    width:max-content;
     animation:move 15s linear infinite;
-    font-weight:800;
 }
 
+.ticker span{
+    display:flex;
+    align-items:center;
+    font-size:clamp(16px, 3vw, 4rem);
+    font-weight:800;
+    color:#0b6cff;
+    padding-right:60px;
+}
+
+.sign{
+    color:red;
+    margin:0 15px;
+    font-size:1.1em;
+}
+
+/* Animation */
+@keyframes move{
+    from{
+        transform:translateX(100%);
+    }
+    to{
+        transform:translateX(-100%);
+    }
+}
+
+/* Mobile Responsive */
+@media(max-width:768px){
+
+    .running-text{
+        padding:10px 0;
+        margin-bottom:40px;
+    }
+
+    .ticker span{
+        font-size:1.3rem;
+        padding-right:40px;
+    }
+
+    .sign{
+        margin:0 10px;
+    }
+}
+</style>
 @keyframes move{
 
     0%{
