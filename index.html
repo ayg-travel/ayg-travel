@@ -1,14 +1,15 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ayg Travel — Reveal Armenia</title>
+<title>Ayg Travel — Explore Armenia</title>
 
 <style>
+
+/* RESET */
 
 *{
     margin:0;
@@ -19,6 +20,8 @@
 
 body{
     font-family:Arial, Helvetica, sans-serif;
+    color:white;
+    overflow-x:hidden;
 
     /* Armenian Flag Background */
     background:linear-gradient(
@@ -30,36 +33,57 @@ body{
         #f2a800 66.6%,
         #f2a800 100%
     );
+}
 
-    color:#111;
-    overflow-x:hidden;
-    line-height:1.6;
+/* CONTAINER */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* HEADER */
+
+.top-header{
+    width:100%;
+    background:black;
+    color:white;
+    padding:12px 5%;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:15px;
+    font-size:0.95rem;
+}
+
+.top-header span{
+    color:#39ff14;
+    font-weight:bold;
 }
 
 /* NAVBAR */
 
 nav{
     width:100%;
-    padding:22px 8%;
-    position:fixed;
+    padding:22px 0;
+    position:sticky;
     top:0;
-    left:0;
     z-index:1000;
+    background:rgba(0,0,0,0.75);
+    backdrop-filter:blur(12px);
+}
+
+.nav-wrapper{
     display:flex;
     justify-content:space-between;
     align-items:center;
-
-    background:rgba(255,255,255,0.15);
-    backdrop-filter:blur(12px);
-
-    border-bottom:1px solid rgba(255,255,255,0.2);
 }
 
 .logo{
-    font-size:1.6rem;
-    font-weight:800;
-    color:white;
-    letter-spacing:1px;
+    font-size:2rem;
+    font-weight:900;
+    color:#39ff14;
 }
 
 .nav-links{
@@ -70,243 +94,194 @@ nav{
 .nav-links a{
     color:white;
     text-decoration:none;
-    transition:0.3s;
     font-weight:600;
+    transition:0.3s;
 }
 
 .nav-links a:hover{
-    color:#ffe082;
+    color:#39ff14;
 }
 
 /* HERO */
 
 .hero{
     min-height:100vh;
-    padding-top:150px;
-    text-align:center;
-    position:relative;
-}
-
-/* RUNNING TITLE */
-
-.running-text{
-    width:100%;
-    overflow:hidden;
-    white-space:nowrap;
-    margin-bottom:80px;
-    background:rgba(255,255,255,0.2);
-    padding:14px 0;
-    border-top:3px solid white;
-    border-bottom:3px solid white;
-}
-
-.ticker{
-    display:inline-block;
-    width:max-content;
-    animation:move 15s linear infinite;
-}
-
-.ticker span{
-    display:flex;
-    align-items:center;
-    font-size:clamp(16px, 3vw, 2rem);
-    font-weight:800;
-    color:white;
-    padding-right:60px;
-}
-
-.sign{
-    color:#ffe082;
-    margin:0 15px;
-    font-size:1.1em;
-}
-
-/* Animation */
-
-@keyframes move{
-    from{
-        transform:translateX(100%);
-    }
-    to{
-        transform:translateX(-100%);
-    }
-}
-
-/* THREAD CARDS */
-
-.dropdown-section{
     display:flex;
     justify-content:center;
-    gap:60px;
-    flex-wrap:wrap;
-    padding:20px;
+    align-items:center;
+    text-align:center;
+    padding:120px 20px;
+    background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=1600&auto=format&fit=crop') center/cover;
 }
 
-.thread-box{
-    position:relative;
-    width:330px;
-
-    background:rgba(255,255,255,0.92);
-    backdrop-filter:blur(10px);
-
-    border-radius:30px;
-    overflow:hidden;
-
-    box-shadow:0 15px 40px rgba(0,0,0,0.2);
-
-    transition:0.4s;
+.hero-content{
+    max-width:850px;
 }
 
-.thread-box:hover{
-    transform:translateY(-12px);
-}
-
-.thread-box::before{
-    content:'';
-    position:absolute;
-    top:-120px;
-    left:50%;
-    width:3px;
-    height:120px;
-    background:white;
-}
-
-/* IMAGE */
-
-.thread-box img{
-    width:100%;
-    height:230px;
-    object-fit:cover;
-}
-
-/* CONTENT */
-
-.thread-content{
-    padding:30px;
-}
-
-.thread-content h2{
-    font-size:1.9rem;
-    margin-bottom:15px;
-    color:#0033a0;
-}
-
-.thread-content p{
-    color:#444;
+.hero h1{
+    font-size:4.5rem;
     margin-bottom:25px;
+    line-height:1.1;
 }
 
-/* BUTTON */
+.hero h1 span{
+    color:#39ff14;
+}
+
+.hero p{
+    font-size:1.2rem;
+    line-height:1.9;
+    color:#eeeeee;
+    margin-bottom:40px;
+}
+
+/* BUTTONS */
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
 
 .btn{
-    display:inline-block;
-    background:#0033a0;
-    color:white;
-    padding:14px 28px;
+    padding:18px 35px;
     border-radius:14px;
     text-decoration:none;
-    font-weight:700;
+    font-weight:800;
     transition:0.3s;
+    display:inline-block;
 }
 
-.btn:hover{
-    background:#d90012;
-    transform:translateY(-4px);
+.primary-btn{
+    background:#39ff14;
+    color:black;
 }
 
-/* ABOUT */
-
-.about{
-    padding:120px 8%;
-    text-align:center;
+.primary-btn:hover{
+    background:white;
+    transform:translateY(-5px);
 }
 
-.about h2{
-    font-size:3rem;
-    margin-bottom:20px;
-    color:white;
+.secondary-btn{
+    background:white;
+    color:black;
 }
 
-.about p{
-    max-width:850px;
-    margin:auto;
-    color:white;
-    font-size:1.1rem;
-    line-height:1.8;
+.secondary-btn:hover{
+    background:#39ff14;
+    transform:translateY(-5px);
 }
 
-/* BENEFITS */
+/* SECTION */
 
-.benefits{
-    padding:40px 8% 120px;
+section{
+    padding:110px 0;
 }
 
 .section-title{
     text-align:center;
     font-size:3rem;
+    margin-bottom:25px;
     color:white;
-    margin-bottom:20px;
+}
+
+.section-title span{
+    color:#39ff14;
 }
 
 .section-text{
     text-align:center;
-    max-width:800px;
+    max-width:850px;
     margin:auto;
-    color:white;
+    line-height:1.9;
+    color:#f0f0f0;
 }
 
-.benefit-grid{
+/* CARDS */
+
+.grid{
+    margin-top:70px;
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-    margin-top:60px;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
 }
 
-.benefit{
-    background:rgba(255,255,255,0.92);
-    backdrop-filter:blur(10px);
-
-    padding:35px;
+.card{
+    background:rgba(0,0,0,0.7);
     border-radius:24px;
-
+    overflow:hidden;
     transition:0.4s;
-
-    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    border:1px solid rgba(255,255,255,0.08);
 }
 
-.benefit:hover{
+.card:hover{
     transform:translateY(-10px);
+    box-shadow:0 0 25px rgba(57,255,20,0.25);
 }
 
-.benefit h3{
-    color:#0033a0;
+.card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:30px;
+}
+
+.card-content h3{
+    color:#39ff14;
+    margin-bottom:18px;
+    font-size:1.6rem;
+}
+
+.card-content p{
+    color:#e2e2e2;
+    line-height:1.8;
+}
+
+/* AGE SECTION */
+
+.age-box{
+    background:rgba(0,0,0,0.7);
+    padding:35px;
+    border-radius:22px;
+    transition:0.4s;
+}
+
+.age-box:hover{
+    transform:translateY(-8px);
+    border:1px solid #39ff14;
+}
+
+.age-box h3{
+    color:#39ff14;
     margin-bottom:15px;
 }
 
-.benefit p{
-    color:#555;
-}
+/* PRICE SECTION */
 
-/* APPLY SECTION */
-
-.apply{
-    padding:120px 8%;
+.price-box{
     text-align:center;
-
-    background:rgba(255,255,255,0.12);
-    backdrop-filter:blur(10px);
+    background:black;
+    padding:60px 30px;
+    border-radius:24px;
+    margin-top:60px;
 }
 
-.apply h2{
-    font-size:3rem;
-    color:white;
+.price-box h3{
+    font-size:2rem;
+    color:#39ff14;
     margin-bottom:20px;
 }
 
-.apply p{
+.price-box p{
     max-width:700px;
     margin:auto;
-    color:white;
+    line-height:1.9;
     margin-bottom:35px;
 }
 
@@ -314,74 +289,61 @@ nav{
 
 .contact{
     text-align:center;
-    padding:100px 8%;
 }
 
-.contact h2{
-    color:white;
-    font-size:2.8rem;
-    margin-bottom:20px;
+.contact-box{
+    background:rgba(0,0,0,0.75);
+    padding:50px 30px;
+    border-radius:24px;
+    margin-top:50px;
 }
 
-.contact p{
-    color:white;
+.contact-box p{
+    margin-bottom:15px;
+    font-size:1.1rem;
 }
 
-.instagram{
-    display:inline-block;
-    margin-top:30px;
-    background:#0033a0;
-    color:white;
-    padding:16px 30px;
-    border-radius:14px;
-    font-weight:700;
-    text-decoration:none;
-    transition:0.3s;
-}
-
-.instagram:hover{
-    background:#d90012;
-    transform:translateY(-5px);
+.contact-box span{
+    color:#39ff14;
+    font-weight:bold;
 }
 
 /* FOOTER */
 
 footer{
+    background:black;
     text-align:center;
-    padding:30px;
-    color:white;
-    border-top:1px solid rgba(255,255,255,0.2);
+    padding:35px 20px;
+    color:#999;
 }
 
 /* MOBILE */
 
 @media(max-width:900px){
 
-    .running-text h1{
-        font-size:2.8rem;
+    .hero h1{
+        font-size:3.2rem;
     }
 
 }
 
 @media(max-width:700px){
 
-    nav{
-        padding:18px 6%;
-    }
-
     .nav-links{
         display:none;
     }
 
-    .about h2,
-    .section-title,
-    .apply h2,
-    .contact h2{
+    .hero h1{
+        font-size:2.4rem;
+    }
+
+    .section-title{
         font-size:2.2rem;
     }
 
-    .dropdown-section{
-        gap:90px;
+    .top-header{
+        flex-direction:column;
+        text-align:center;
     }
 
 }
@@ -391,19 +353,42 @@ footer{
 
 <body>
 
+<!-- TOP HEADER -->
+
+<div class="top-header">
+
+<div>
+<span>Email:</span> aygtravel@gmail.com
+</div>
+
+<div>
+<span>Phone:</span> +374 99 123 456
+</div>
+
+<div>
+<span>Places:</span> Yerevan • Dilijan • Sevan • Tatev
+</div>
+
+</div>
+
 <!-- NAVBAR -->
 
 <nav>
+
+<div class="container nav-wrapper">
 
 <div class="logo">
 AYG TRAVEL
 </div>
 
 <div class="nav-links">
-<a href="#">History</a>
-<a href="#">Cities</a>
-<a href="#">Adventure</a>
-<a href="#">Competition</a>
+<a href="#about">About</a>
+<a href="#tours">Tours</a>
+<a href="#ages">Ages</a>
+<a href="#prices">Prices</a>
+<a href="#contact">Contact</a>
+</div>
+
 </div>
 
 </nav>
@@ -412,93 +397,29 @@ AYG TRAVEL
 
 <section class="hero">
 
-<!-- RUNNING TITLE -->
+<div class="hero-content">
 
-<div class="running-text">
-    <div class="ticker">
-        <span>
-            <span class="sign">✦</span>
-            Discover Armenia Through Modern Youth Experiences
-            <span class="sign">✦</span>
-            Explore • Create • Travel
-            <span class="sign">✦</span>
-            AYG TRAVEL
-            <span class="sign">✦</span>
-        </span>
-    </div>
-</div>
-
-<!-- THREAD CARDS -->
-
-<div class="dropdown-section">
-
-<!-- HISTORY -->
-
-<div class="thread-box">
-
-<img src="https://armenian-history.com/wp-content/uploads/2023/04/Armenian-history-mobile1.jpg">
-
-<div class="thread-content">
-
-<h2>Reveal History</h2>
+<h1>
+Explore <span>Armenia</span> This August
+</h1>
 
 <p>
-Explore ancient monasteries,
-legendary Armenian kingdoms,
-hidden temples, and timeless Armenian history.
+Discover unforgettable tours, breathtaking landscapes,
+ancient culture, and authentic local experiences across Armenia.
+Travel through mountains, monasteries,
+historic cities, and modern Armenian adventures.
 </p>
 
-<a href="#" class="btn">
-Explore History
+<div class="hero-buttons">
+
+<a href="#" class="btn primary-btn">
+Apply Now
 </a>
 
-</div>
-</div>
-
-<!-- CITIES -->
-
-<div class="thread-box">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Yerevan_2012_February.JPG">
-
-<div class="thread-content">
-
-<h2>Reveal Cities</h2>
-
-<p>
-Discover Yerevan nightlife,
-creative cafes, architecture,
-urban culture, and modern Armenian life.
-</p>
-
-<a href="#" class="btn">
-Explore Cities
+<a href="#tours" class="btn secondary-btn">
+Explore Tours
 </a>
 
-</div>
-</div>
-
-<!-- ADVENTURE -->
-
-<div class="thread-box">
-
-<img src="https://www.adventures.am/images/2019/09/19/rafting1.jpg">
-
-<div class="thread-content">
-
-<h2>Start Adventure</h2>
-
-<p>
-Experience hiking, rafting,
-mountains, forests, lakes,
-and unforgettable travel journeys.
-</p>
-
-<a href="#" class="btn">
-Start Adventure
-</a>
-
-</div>
 </div>
 
 </div>
@@ -507,74 +428,179 @@ Start Adventure
 
 <!-- ABOUT -->
 
-<section class="about">
+<section id="about">
 
-<h2>Reveal Armenia</h2>
+<div class="container">
+
+<h2 class="section-title">
+About <span>Ayg Travel</span>
+</h2>
+
+<p class="section-text">
+Ayg Travel is a modern Armenian travel startup
+designed for students, tourists,
+families, creators, and adventure seekers.
+
+We combine culture, history,
+technology, exploration,
+and authentic local experiences
+into unforgettable journeys across Armenia.
+</p>
+
+</div>
+
+</section>
+
+<!-- TOURS -->
+
+<section id="tours">
+
+<div class="container">
+
+<h2 class="section-title">
+Explore <span>Armenia</span>
+</h2>
+
+<div class="grid">
+
+<!-- HISTORY -->
+
+<div class="card">
+
+<img src="https://cdn.thecollector.com/wp-content/uploads/2024/07/must-see-historic-sites-armenia.jpg">
+
+<div class="card-content">
+
+<h3>
+Historical & Cultural Places
+</h3>
 
 <p>
-Ayg Travel is a modern Armenian startup
-creating immersive travel experiences
-for students, creators, developers,
-and young explorers.
-
-Instead of traditional tourism,
-we combine travel, culture,
-technology, innovation,
-and storytelling into unforgettable journeys.
+Visit ancient monasteries,
+historic Armenian kingdoms,
+cultural landmarks,
+and breathtaking architecture
+across Armenia.
 </p>
+
+</div>
+
+</div>
+
+<!-- ADVENTURE -->
+
+<div class="card">
+
+<img src="https://halaarmenia.com/wp-content/uploads/2024/10/rafting-isonzo6666.jpg">
+
+<div class="card-content">
+
+<h3>
+Adventure Experiences
+</h3>
+
+<p>
+Explore rafting,
+hiking,
+mountains,
+lakes,
+camping,
+and unforgettable outdoor adventures.
+</p>
+
+</div>
+
+</div>
+
+<!-- CITY -->
+
+<div class="card">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Yerevan_2012_February.JPG">
+
+<div class="card-content">
+
+<h3>
+Modern Yerevan
+</h3>
+
+<p>
+Discover Armenian cafes,
+nightlife,
+creative spaces,
+technology communities,
+and modern city experiences.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 <!-- BENEFITS -->
 
-<section class="benefits">
+<section>
+
+<div class="container">
 
 <h2 class="section-title">
-Young IT Talent Competition
+What You <span>Will Learn</span>
 </h2>
 
-<p class="section-text">
+<div class="grid">
+
+<div class="age-box">
+
+<h3>
+Leadership & Networking
+</h3>
+
+<p>
 Meet ambitious students,
-developers, designers,
-and innovators through
-modern competitions and startup-style experiences.
-</p>
-
-<div class="benefit-grid">
-
-<div class="benefit">
-
-<h3>Innovation & Creativity</h3>
-
-<p>
-Learn startup thinking,
-problem solving,
-and creative collaboration.
+developers,
+designers,
+and entrepreneurs
+from around the world.
 </p>
 
 </div>
 
-<div class="benefit">
+<div class="age-box">
 
-<h3>Networking</h3>
+<h3>
+Cultural Experience
+</h3>
 
 <p>
-Connect with students,
-developers, designers,
-and future founders.
+Learn Armenian traditions,
+food,
+music,
+history,
+and local storytelling experiences.
 </p>
 
 </div>
 
-<div class="benefit">
+<div class="age-box">
 
-<h3>Real Experience</h3>
+<h3>
+Adventure & Exploration
+</h3>
 
 <p>
-Participate in practical workshops,
-travel experiences,
-and innovation challenges.
+Build confidence,
+teamwork,
+communication,
+and travel experience
+through exciting activities.
 </p>
+
+</div>
 
 </div>
 
@@ -582,45 +608,146 @@ and innovation challenges.
 
 </section>
 
-<!-- APPLY -->
+<!-- AGES -->
 
-<section class="apply">
+<section id="ages">
 
-<h2>Ready To Reveal Armenia?</h2>
+<div class="container">
+
+<h2 class="section-title">
+Activities For <span>All Ages</span>
+</h2>
+
+<div class="grid">
+
+<div class="age-box">
+
+<h3>
+Young People (18–35)
+</h3>
 
 <p>
-Join the next generation of Armenian creators,
-explorers, innovators, and young IT talents.
+Adventure tours,
+nightlife,
+startup events,
+creative workshops,
+hiking,
+and modern travel experiences.
 </p>
 
-<a href="#" class="btn">
-Apply Now
+</div>
+
+<div class="age-box">
+
+<h3>
+Adults (40+)
+</h3>
+
+<p>
+Relaxing cultural tours,
+wine tasting,
+nature trips,
+historic destinations,
+and premium comfort experiences.
+</p>
+
+</div>
+
+<div class="age-box">
+
+<h3>
+Grandparents
+</h3>
+
+<p>
+Comfortable sightseeing tours,
+traditional Armenian experiences,
+local food,
+beautiful landscapes,
+and peaceful travel programs.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PRICES -->
+
+<section id="prices">
+
+<div class="container">
+
+<h2 class="section-title">
+Choose Your <span>Budget</span>
+</h2>
+
+<div class="price-box">
+
+<h3>
+Flexible Travel Pricing
+</h3>
+
+<p>
+Tell us your budget and travel preferences.
+Our team will send personalized travel options,
+hotel packages,
+tour plans,
+and activities that match your needs.
+</p>
+
+<a href="#" class="btn primary-btn">
+Choose Your Budget
 </a>
+
+</div>
+
+</div>
 
 </section>
 
 <!-- CONTACT -->
 
-<section class="contact">
+<section id="contact" class="contact">
 
-<h2>Instagram & Contact</h2>
+<div class="container">
+
+<h2 class="section-title">
+How To <span>Contact Us</span>
+</h2>
+
+<div class="contact-box">
 
 <p>
-Follow our adventures across Armenia.
+<span>Email:</span> aygtravel@gmail.com
 </p>
 
-<a href="#" class="instagram">
-@aygtravel
-</a>
+<p>
+<span>Phone:</span> +374 99 123 456
+</p>
+
+<p>
+<span>Instagram:</span> @aygtravel
+</p>
+
+<p>
+<span>Locations:</span> Yerevan • Dilijan • Gyumri • Sevan • Tatev
+</p>
+
+</div>
+
+</div>
 
 </section>
 
 <!-- FOOTER -->
 
 <footer>
-© 2026 Ayg Travel — Reveal Armenia
+© 2026 Ayg Travel — Explore Armenia
 </footer>
 
 </body>
 </html>
-```
