@@ -1,10 +1,10 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <title>Ayg Travel — Reveal Armenia</title>
 
@@ -19,7 +19,18 @@
 
 body{
     font-family:Arial, Helvetica, sans-serif;
-    background:#dff6ff;
+
+    /* Armenian Flag Background */
+    background:linear-gradient(
+        to bottom,
+        #d90012 0%,
+        #d90012 33.3%,
+        #0033a0 33.3%,
+        #0033a0 66.6%,
+        #f2a800 66.6%,
+        #f2a800 100%
+    );
+
     color:#111;
     overflow-x:hidden;
     line-height:1.6;
@@ -37,15 +48,17 @@ nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background:rgba(223,246,255,0.85);
+
+    background:rgba(255,255,255,0.15);
     backdrop-filter:blur(12px);
-    border-bottom:1px solid rgba(0,0,0,0.05);
+
+    border-bottom:1px solid rgba(255,255,255,0.2);
 }
 
 .logo{
     font-size:1.6rem;
     font-weight:800;
-    color:#0b6cff;
+    color:white;
     letter-spacing:1px;
 }
 
@@ -55,14 +68,14 @@ nav{
 }
 
 .nav-links a{
-    color:#333;
+    color:white;
     text-decoration:none;
     transition:0.3s;
     font-weight:600;
 }
 
 .nav-links a:hover{
-    color:#00b140;
+    color:#ffe082;
 }
 
 /* HERO */
@@ -74,24 +87,6 @@ nav{
     position:relative;
 }
 
-
-}<!-- RUNNING TITLE -->
-
-<div class="running-text">
-    <div class="ticker">
-        <span>
-            <span class="sign">✦</span>
-            Welcome to Our Website
-            <span class="sign">✦</span>
-            Latest Offers Available Now
-            <span class="sign">✦</span>
-            Fast • Responsive • Modern
-            <span class="sign">✦</span>
-        </span>
-    </div>
-</div>
-
-<style>
 /* RUNNING TITLE */
 
 .running-text{
@@ -99,10 +94,10 @@ nav{
     overflow:hidden;
     white-space:nowrap;
     margin-bottom:80px;
-    background:#ffcc00;
+    background:rgba(255,255,255,0.2);
     padding:14px 0;
-    border-top:3px solid #000;
-    border-bottom:3px solid #000;
+    border-top:3px solid white;
+    border-bottom:3px solid white;
 }
 
 .ticker{
@@ -114,19 +109,20 @@ nav{
 .ticker span{
     display:flex;
     align-items:center;
-    font-size:clamp(16px, 3vw, 4rem);
+    font-size:clamp(16px, 3vw, 2rem);
     font-weight:800;
-    color:#0b6cff;
+    color:white;
     padding-right:60px;
 }
 
 .sign{
-    color:red;
+    color:#ffe082;
     margin:0 15px;
     font-size:1.1em;
 }
 
 /* Animation */
+
 @keyframes move{
     from{
         transform:translateX(100%);
@@ -134,36 +130,6 @@ nav{
     to{
         transform:translateX(-100%);
     }
-}
-
-/* Mobile Responsive */
-@media(max-width:768px){
-
-    .running-text{
-        padding:10px 0;
-        margin-bottom:40px;
-    }
-
-    .ticker span{
-        font-size:1.3rem;
-        padding-right:40px;
-    }
-
-    .sign{
-        margin:0 10px;
-    }
-}
-</style>
-@keyframes move{
-
-    0%{
-        transform:translateX(100%);
-    }
-
-    100%{
-        transform:translateX(-100%);
-    }
-
 }
 
 /* THREAD CARDS */
@@ -179,18 +145,21 @@ nav{
 .thread-box{
     position:relative;
     width:330px;
-    background:white;
+
+    background:rgba(255,255,255,0.92);
+    backdrop-filter:blur(10px);
+
     border-radius:30px;
     overflow:hidden;
-    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+
+    box-shadow:0 15px 40px rgba(0,0,0,0.2);
+
     transition:0.4s;
 }
 
 .thread-box:hover{
     transform:translateY(-12px);
 }
-
-/* THREAD */
 
 .thread-box::before{
     content:'';
@@ -199,7 +168,7 @@ nav{
     left:50%;
     width:3px;
     height:120px;
-    background:#555;
+    background:white;
 }
 
 /* IMAGE */
@@ -219,11 +188,11 @@ nav{
 .thread-content h2{
     font-size:1.9rem;
     margin-bottom:15px;
-    color:#0b6cff;
+    color:#0033a0;
 }
 
 .thread-content p{
-    color:#555;
+    color:#444;
     margin-bottom:25px;
 }
 
@@ -231,7 +200,7 @@ nav{
 
 .btn{
     display:inline-block;
-    background:#00b140;
+    background:#0033a0;
     color:white;
     padding:14px 28px;
     border-radius:14px;
@@ -241,7 +210,7 @@ nav{
 }
 
 .btn:hover{
-    background:#008f33;
+    background:#d90012;
     transform:translateY(-4px);
 }
 
@@ -255,13 +224,13 @@ nav{
 .about h2{
     font-size:3rem;
     margin-bottom:20px;
-    color:#0b6cff;
+    color:white;
 }
 
 .about p{
     max-width:850px;
     margin:auto;
-    color:#444;
+    color:white;
     font-size:1.1rem;
     line-height:1.8;
 }
@@ -275,7 +244,7 @@ nav{
 .section-title{
     text-align:center;
     font-size:3rem;
-    color:#0b6cff;
+    color:white;
     margin-bottom:20px;
 }
 
@@ -283,7 +252,7 @@ nav{
     text-align:center;
     max-width:800px;
     margin:auto;
-    color:#444;
+    color:white;
 }
 
 .benefit-grid{
@@ -294,11 +263,15 @@ nav{
 }
 
 .benefit{
-    background:white;
+    background:rgba(255,255,255,0.92);
+    backdrop-filter:blur(10px);
+
     padding:35px;
     border-radius:24px;
+
     transition:0.4s;
-    box-shadow:0 10px 30px rgba(0,0,0,0.06);
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
 
 .benefit:hover{
@@ -306,7 +279,7 @@ nav{
 }
 
 .benefit h3{
-    color:#0b6cff;
+    color:#0033a0;
     margin-bottom:15px;
 }
 
@@ -319,19 +292,21 @@ nav{
 .apply{
     padding:120px 8%;
     text-align:center;
-    background:white;
+
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(10px);
 }
 
 .apply h2{
     font-size:3rem;
-    color:#0b6cff;
+    color:white;
     margin-bottom:20px;
 }
 
 .apply p{
     max-width:700px;
     margin:auto;
-    color:#555;
+    color:white;
     margin-bottom:35px;
 }
 
@@ -343,19 +318,19 @@ nav{
 }
 
 .contact h2{
-    color:#0b6cff;
+    color:white;
     font-size:2.8rem;
     margin-bottom:20px;
 }
 
 .contact p{
-    color:#555;
+    color:white;
 }
 
 .instagram{
     display:inline-block;
     margin-top:30px;
-    background:#00b140;
+    background:#0033a0;
     color:white;
     padding:16px 30px;
     border-radius:14px;
@@ -365,7 +340,7 @@ nav{
 }
 
 .instagram:hover{
-    background:#008f33;
+    background:#d90012;
     transform:translateY(-5px);
 }
 
@@ -374,8 +349,8 @@ nav{
 footer{
     text-align:center;
     padding:30px;
-    color:#666;
-    border-top:1px solid rgba(0,0,0,0.05);
+    color:white;
+    border-top:1px solid rgba(255,255,255,0.2);
 }
 
 /* MOBILE */
@@ -398,10 +373,6 @@ footer{
         display:none;
     }
 
-    .running-text h1{
-        font-size:2rem;
-    }
-
     .about h2,
     .section-title,
     .apply h2,
@@ -416,7 +387,6 @@ footer{
 }
 
 </style>
-
 </head>
 
 <body>
@@ -442,12 +412,20 @@ AYG TRAVEL
 
 <section class="hero">
 
+<!-- RUNNING TITLE -->
+
 <div class="running-text">
-
-<h1>
-Discover Armenia Through Modern Youth Experiences
-</h1>
-
+    <div class="ticker">
+        <span>
+            <span class="sign">✦</span>
+            Discover Armenia Through Modern Youth Experiences
+            <span class="sign">✦</span>
+            Explore • Create • Travel
+            <span class="sign">✦</span>
+            AYG TRAVEL
+            <span class="sign">✦</span>
+        </span>
+    </div>
 </div>
 
 <!-- THREAD CARDS -->
@@ -462,9 +440,7 @@ Discover Armenia Through Modern Youth Experiences
 
 <div class="thread-content">
 
-<h2>
-Reveal History
-</h2>
+<h2>Reveal History</h2>
 
 <p>
 Explore ancient monasteries,
@@ -477,7 +453,6 @@ Explore History
 </a>
 
 </div>
-
 </div>
 
 <!-- CITIES -->
@@ -488,9 +463,7 @@ Explore History
 
 <div class="thread-content">
 
-<h2>
-Reveal Cities
-</h2>
+<h2>Reveal Cities</h2>
 
 <p>
 Discover Yerevan nightlife,
@@ -503,7 +476,6 @@ Explore Cities
 </a>
 
 </div>
-
 </div>
 
 <!-- ADVENTURE -->
@@ -514,9 +486,7 @@ Explore Cities
 
 <div class="thread-content">
 
-<h2>
-Start Adventure
-</h2>
+<h2>Start Adventure</h2>
 
 <p>
 Experience hiking, rafting,
@@ -529,7 +499,6 @@ Start Adventure
 </a>
 
 </div>
-
 </div>
 
 </div>
@@ -540,9 +509,7 @@ Start Adventure
 
 <section class="about">
 
-<h2>
-Reveal Armenia
-</h2>
+<h2>Reveal Armenia</h2>
 
 <p>
 Ayg Travel is a modern Armenian startup
@@ -577,9 +544,7 @@ modern competitions and startup-style experiences.
 
 <div class="benefit">
 
-<h3>
-Innovation & Creativity
-</h3>
+<h3>Innovation & Creativity</h3>
 
 <p>
 Learn startup thinking,
@@ -591,9 +556,7 @@ and creative collaboration.
 
 <div class="benefit">
 
-<h3>
-Networking
-</h3>
+<h3>Networking</h3>
 
 <p>
 Connect with students,
@@ -605,9 +568,7 @@ and future founders.
 
 <div class="benefit">
 
-<h3>
-Real Experience
-</h3>
+<h3>Real Experience</h3>
 
 <p>
 Participate in practical workshops,
@@ -625,9 +586,7 @@ and innovation challenges.
 
 <section class="apply">
 
-<h2>
-Ready To Reveal Armenia?
-</h2>
+<h2>Ready To Reveal Armenia?</h2>
 
 <p>
 Join the next generation of Armenian creators,
@@ -644,9 +603,7 @@ Apply Now
 
 <section class="contact">
 
-<h2>
-Instagram & Contact
-</h2>
+<h2>Instagram & Contact</h2>
 
 <p>
 Follow our adventures across Armenia.
@@ -665,5 +622,5 @@ Follow our adventures across Armenia.
 </footer>
 
 </body>
-
 </html>
+```
