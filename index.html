@@ -140,16 +140,7 @@ section{
   margin-bottom:10px;
 }
 
-/* TESTIMONIALS */
-.testimonial img{
-  width:60px;
-  height:60px;
-  border-radius:50%;
-  border:2px solid #4fd1c5;
-  margin-bottom:10px;
-}
-
-/* CONTACT */
+/* CONTACT ONLY (CLEAN) */
 .contact{
   text-align:center;
 }
@@ -158,20 +149,6 @@ section{
   color:#4fd1c5;
   font-weight:bold;
   text-decoration:none;
-}
-
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:20px;
-  opacity:0.6;
-  border-top:1px solid rgba(255,255,255,0.1);
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-  .hero h1{font-size:32px;}
-  header{flex-direction:column;gap:10px;}
 }
 </style>
 </head>
@@ -183,7 +160,6 @@ footer{
   <nav>
     <a href="#about">About</a>
     <a href="#tours">Tours</a>
-    <a href="#reviews">Reviews</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -193,11 +169,11 @@ footer{
   <h1>Explore the World with Confidence</h1>
 
   <div class="marquee">
-    <span>✈️ Europe Tours • 🌍 Asia Adventures • 🏝️ Maldives • 🧳 Student Travel Deals • 💙 People Love Ayg Travel • </span>
+    <span>✈️ Europe Tours • 🌍 Asia Adventures • 🏝️ Maldives • 🧳 Student Travel Deals • 💙 Ayg Travel • </span>
   </div>
 
   <p>
-    Ayg Travel helps you discover unforgettable journeys, curated travel experiences, and seamless planning for students and explorers.
+    Ayg Travel helps you discover unforgettable journeys with safe and affordable travel packages.
   </p>
 
   <a href="https://www.instagram.com" class="btn" target="_blank">
@@ -209,7 +185,7 @@ footer{
 <section id="about">
   <h2 class="section-title">About Ayg Travel</h2>
   <p>
-    We are a modern travel agency helping students and travelers explore the world with affordable and safe packages.
+    We are a modern travel agency helping students and travelers explore the world with affordable packages.
   </p>
 </section>
 
@@ -222,55 +198,27 @@ footer{
     <div class="card">
       <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34">
       <h3>Paris Tour</h3>
-      <p>Romantic city of lights.</p>
+      <p>Romantic city of lights</p>
     </div>
 
     <div class="card">
       <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad">
       <h3>Dubai Tour</h3>
-      <p>Luxury skyscrapers & desert safari.</p>
+      <p>Luxury desert & skyscrapers</p>
     </div>
 
     <div class="card">
       <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
       <h3>Maldives Tour</h3>
-      <p>Crystal clear water paradise.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section id="reviews">
-  <h2 class="section-title">People Love It 💙</h2>
-
-  <div class="grid">
-
-    <div class="card testimonial">
-      <img src="https://randomuser.me/api/portraits/women/44.jpg">
-      <h3>Anna</h3>
-      <p>Best travel experience ever!</p>
-    </div>
-
-    <div class="card testimonial">
-      <img src="https://randomuser.me/api/portraits/men/32.jpg">
-      <h3>David</h3>
-      <p>Very professional service!</p>
-    </div>
-
-    <div class="card testimonial">
-      <img src="https://randomuser.me/api/portraits/women/68.jpg">
-      <h3>Sophia</h3>
-      <p>Highly recommended travel agency!</p>
+      <p>Crystal blue paradise</p>
     </div>
 
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
+<section id="contact" class="contact">
   <h2 class="section-title">Contact</h2>
-
   <p>Instagram:</p>
   <a href="https://www.instagram.com" target="_blank">@aygtravel</a>
 
@@ -280,10 +228,6 @@ footer{
     Apply Now
   </a>
 </section>
-
-<footer>
-  © 2026 Ayg Travel. All rights reserved.
-</footer>
 
 </body>
 </html>
