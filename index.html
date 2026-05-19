@@ -1,266 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aug Travel - Explore Armenia</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Aug Travel - Armenia Tours</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
-    body {
-      line-height: 1.6;
-      color: #333;
-    }
+body {
+  line-height: 1.6;
+  color: #333;
+}
 
-    /* HERO SECTION */
-    .hero {
-      height: 100vh;
-      background: url('https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a') center/cover no-repeat;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-      padding: 20px;
-      position: relative;
-    }
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  position: relative;
+}
 
-    /* RUNNING TICKER */
-    .ticker {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      overflow: hidden;
-      white-space: nowrap;
-      background: rgba(0,0,0,0.5);
-      padding: 10px 0;
-    }
+/* RUNNING LINE */
+.ticker {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  background: rgba(0,0,0,0.5);
+  white-space: nowrap;
+}
 
-    .ticker-text {
-      display: inline-block;
-      padding-left: 100%;
-      animation: scrollText 18s linear infinite;
-      font-size: 14px;
-      color: #fff;
-    }
+.ticker span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: move 15s linear infinite;
+  font-size: 14px;
+  padding: 10px 0;
+}
 
-    @keyframes scrollText {
-      0% { transform: translateX(0%); }
-      100% { transform: translateX(-100%); }
-    }
+@keyframes move {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
 
-    .hero h1 {
-      font-size: 50px;
-      margin-bottom: 15px;
-    }
+.hero h1 {
+  font-size: 48px;
+  margin: 15px 0;
+}
 
-    .hero p {
-      font-size: 20px;
-      margin-bottom: 20px;
-    }
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
 
-    .hero-buttons {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+.btn {
+  background: #ff7b00;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 5px;
+  display: inline-block;
+}
 
-    .btn {
-      background: #ff7b00;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
+/* SECTIONS */
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
 
-    .btn:hover {
-      background: #e66900;
-    }
+h2 {
+  margin-bottom: 20px;
+}
 
-    /* SECTIONS */
-    section {
-      padding: 60px 20px;
-      text-align: center;
-    }
+/* SERVICES */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  max-width: 1000px;
+  margin: auto;
+}
 
-    h2 {
-      margin-bottom: 20px;
-      font-size: 32px;
-    }
+.box {
+  background: #f4f4f4;
+  padding: 15px;
+  border-radius: 10px;
+}
 
-    /* SERVICES */
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+/* DESTINATIONS */
+.destinations {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  max-width: 1000px;
+  margin: auto;
+}
 
-    .service-box {
-      background: #f4f4f4;
-      padding: 20px;
-      border-radius: 10px;
-    }
+.dest {
+  background: white;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
 
-    /* DESTINATIONS */
-    .destinations {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+.dest img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
 
-    .dest {
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
+.dest p {
+  padding: 10px;
+}
 
-    .dest img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
+/* QUIZ */
+.quiz {
+  background: #f8f8f8;
+}
 
-    .dest p {
-      padding: 10px;
-    }
+.quiz-box {
+  max-width: 400px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
 
-    /* CONTACT */
-    .contact {
-      background: #222;
-      color: white;
-    }
+.quiz-box select,
+.quiz-box button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
 
-    .contact p {
-      margin: 10px 0;
-    }
+.quiz-box button {
+  background: #ff7b00;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
 
-    footer {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 15px;
-    }
+/* CONTACT */
+.contact {
+  background: #222;
+  color: white;
+}
 
-    /* RESPONSIVE DESIGN */
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 32px;
-      }
+footer {
+  background: #111;
+  color: white;
+  padding: 15px;
+}
 
-      .hero p {
-        font-size: 16px;
-      }
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 28px;
+  }
 
-      .ticker-text {
-        font-size: 12px;
-      }
-
-      .btn {
-        padding: 10px 16px;
-        font-size: 14px;
-      }
-    }
-  </style>
+  .hero p {
+    font-size: 14px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <div class="hero">
+<!-- HERO -->
+<div class="hero">
 
-    <!-- RUNNING LINE -->
-    <div class="ticker">
-      <div class="ticker-text">
-        ✈️ Explore Armenia’s hidden gems • 🏔️ Mountain adventures • 🏛️ Cultural heritage tours • 🚐 Private & group travel • 🌅 Unforgettable experiences with Aug Travel •
-      </div>
-    </div>
-
-    <h1>Explore Armenia with Aug Travel</h1>
-    <p>Guided tours, adventures & unforgettable experiences</p>
-
-    <div class="hero-buttons">
-      <a href="#contact" class="btn">Book a Tour</a>
-      <a href="#destinations" class="btn">View Packages</a>
-    </div>
+  <div class="ticker">
+    <span>
+      ✈️ Explore Armenia • 🏔️ Mountain Adventures • 🏛️ Culture Tours • 🚐 Private Trips • 🌅 Hidden Gems with Aug Travel •
+    </span>
   </div>
 
-  <!-- ABOUT -->
-  <section>
-    <h2>About Us</h2>
-    <p>
-      Aug Travel is a local travel agency offering guided tours across Armenia.
-      We create unforgettable experiences through culture, history, and nature adventures.
-    </p>
-  </section>
+  <h1>Explore Armenia with Aug Travel</h1>
+  <p>Guided tours, adventures & unforgettable experiences</p>
 
-  <!-- SERVICES -->
-  <section>
-    <h2>What We Offer</h2>
-    <div class="services">
-      <div class="service-box">🚐 Private & Group Tours</div>
-      <div class="service-box">🏔️ Mountain Adventures</div>
-      <div class="service-box">🏛️ Cultural Tours</div>
-      <div class="service-box">✈️ Airport Transfers</div>
-      <div class="service-box">🏨 Hotel Booking</div>
-      <div class="service-box">🗺️ Custom Trips</div>
-    </div>
-  </section>
+  <a href="#quiz" class="btn">Find Your Tour</a>
+  <a href="#destinations" class="btn">View Destinations</a>
 
-  <!-- DESTINATIONS -->
-  <section id="destinations">
-    <h2>Top Destinations</h2>
-    <div class="destinations">
+</div>
 
-      <div class="dest">
-        <img src="https://images.unsplash.com/photo-1590005354167-6da97870c757" />
-        <p>Lake Sevan</p>
-      </div>
+<!-- ABOUT -->
+<section>
+<h2>About Us</h2>
+<p>Aug Travel offers unforgettable tours across Armenia with local guides, nature adventures and cultural experiences.</p>
+</section>
 
-      <div class="dest">
-        <img src="https://images.unsplash.com/photo-1589308078053-8328f0a0c6b3" />
-        <p>Tatev Monastery</p>
-      </div>
+<!-- SERVICES -->
+<section>
+<h2>What We Offer</h2>
+<div class="grid">
+  <div class="box">🚐 Private Tours</div>
+  <div class="box">🏔️ Mountain Trips</div>
+  <div class="box">🏛️ Cultural Tours</div>
+  <div class="box">✈️ Transfers</div>
+  <div class="box">🏨 Hotels</div>
+  <div class="box">🗺️ Custom Trips</div>
+</div>
+</section>
 
-      <div class="dest">
-        <img src="https://images.unsplash.com/photo-1608032077016-9f4a7c8f4c34" />
-        <p>Garni Temple</p>
-      </div>
+<!-- DESTINATIONS -->
+<section id="destinations">
+<h2>Top Destinations</h2>
 
-      <div class="dest">
-        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" />
-        <p>Armenian Mountains</p>
-      </div>
+<div class="destinations">
 
-    </div>
-  </section>
+  <div class="dest">
+    <img src="https://images.unsplash.com/photo-1590005354167-6da97870c757">
+    <p>Lake Sevan</p>
+  </div>
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <h2>Contact Us</h2>
-    <p>Plan your trip with Aug Travel today!</p>
-    <p>Email: info@augtravel.com</p>
-    <p>Phone: +374 XX XXX XXX</p>
-  </section>
+  <div class="dest">
+    <img src="https://images.unsplash.com/photo-1589308078053-8328f0a0c6b3">
+    <p>Tatev Monastery</p>
+  </div>
 
-  <footer>
-    <p>© 2026 Aug Travel. All rights reserved.</p>
-  </footer>
+  <div class="dest">
+    <img src="https://images.unsplash.com/photo-1608032077016-9f4a7c8f4c34">
+    <p>Garni Temple</p>
+  </div>
+
+  <div class="dest">
+    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+    <p>Armenian Mountains</p>
+  </div>
+
+</div>
+</section>
+
+<!-- QUIZ -->
+<section class="quiz" id="quiz">
+<h2>Find Your Perfect Tour</h2>
+
+<div class="quiz-box">
+
+  <select id="budget">
+    <option value="low">Under $100</option>
+    <option value="mid">$100 - $300</option>
+    <option value="high">$300+</option>
+  </select>
+
+  <select id="interest">
+    <option value="nature">Nature</option>
+    <option value="culture">Culture</option>
+    <option value="relax">Relax</option>
+  </select>
+
+  <button onclick="showTour()">Show My Tour</button>
+
+  <h3 id="result"></h3>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+<h2>Contact Us</h2>
+<p>Email: info@augtravel.com</p>
+<p>Phone: +374 XX XXX XXX</p>
+</section>
+
+<footer>
+<p>© 2026 Aug Travel</p>
+</footer>
+
+<script>
+function showTour() {
+  let budget = document.getElementById("budget").value;
+  let interest = document.getElementById("interest").value;
+
+  let price = "";
+  let tour = "";
+
+  if (budget == "low") price = "$50 - $90";
+  if (budget == "mid") price = "$100 - $250";
+  if (budget == "high") price = "$300 - $600";
+
+  if (interest == "nature") tour = "Mountain & Lake Tour";
+  if (interest == "culture") tour = "Cultural Monasteries Tour";
+  if (interest == "relax") tour = "City Relax Tour";
+
+  document.getElementById("result").innerHTML =
+    tour + " | Price: " + price;
+}
+</script>
 
 </body>
 </html>
