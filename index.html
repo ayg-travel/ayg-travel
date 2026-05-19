@@ -1,156 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aug Travel - Armenia Tours</title>
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AYG Travel Tour</title>
 
-<body>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
-<!-- HERO SECTION -->
-<center>
+body {
+  background: #0b0b0b;
+  color: white;
+}
 
-<marquee behavior="scroll" direction="left">
-✈️ Explore Armenia • 🏔️ Mountain Adventures • 🏛️ Cultural Tours • 🚐 Private Trips • 🌅 Aug Travel Experiences
-</marquee>
+/* NAV STYLE */
+.nav {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0f0f0f;
+}
 
-<br><br>
+.logo {
+  color: #39ff14;
+  font-weight: bold;
+  font-size: 20px;
+}
 
-<img src="https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a" width="100%">
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
 
-<h1>Explore Armenia with Aug Travel</h1>
+.hero h1 {
+  font-size: 42px;
+  color: #39ff14;
+}
 
-<p>
-Guided tours, hidden gems, and unforgettable adventures across Armenia and beyond.
-</p>
+.hero p {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #ccc;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-<button>Book a Tour</button>
-<button>View Destinations</button>
+.btn {
+  margin-top: 25px;
+  padding: 12px 20px;
+  background: #39ff14;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  display: inline-block;
+  text-decoration: none;
+  transition: 0.3s;
+}
 
-</center>
+.btn:hover {
+  background: white;
+  color: black;
+  transform: scale(1.05);
+}
 
-<hr>
-
-<!-- ABOUT -->
-<h2>About Us</h2>
-<p>
-Aug Travel is a local travel agency offering guided tours across Armenia.
-We create memorable experiences through culture, history, and nature.
-</p>
-
-<hr>
-
-<!-- 🖼️ NEW IMAGE ADDED HERE -->
-<h2>Experience Armenia With Us</h2>
-
-<img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da" width="100%">
-
-<hr>
-
-<!-- SERVICES -->
-<h2>What We Offer</h2>
-
-<ul>
-  <li>Private & Group Tours</li>
-  <li>Mountain Adventures</li>
-  <li>Cultural Tours</li>
-  <li>Airport Transfers</li>
-  <li>Hotel Booking</li>
-  <li>Custom Trips</li>
-</ul>
-
-<hr>
 /* SECTIONS */
 section {
-  padding: 50px 20px;
-  text-align: center;
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
 }
 
 h2 {
+  color: #39ff14;
   margin-bottom: 20px;
 }
 
-/* SERVICES */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  max-width: 1000px;
-  margin: auto;
+/* ABOUT */
+.about {
+  color: #ccc;
+  line-height: 1.6;
 }
 
-.box {
-  background: #f4f4f4;
-  padding: 15px;
+/* BENEFITS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #111;
+  padding: 20px;
   border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border: 1px solid #39ff14;
 }
 
 /* DESTINATIONS */
-.destinations {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
-  max-width: 1000px;
-  margin: auto;
-}
-
 .dest {
-  background: white;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  border-radius: 10px;
-  overflow: hidden;
+  margin-top: 20px;
 }
 
 .dest img {
   width: 100%;
-  height: 150px;
-  object-fit: cover;
+  border-radius: 10px;
 }
 
 .dest p {
-  padding: 10px;
-}
-
-/* QUIZ */
-.quiz {
-  background: #f8f8f8;
-}
-
-.quiz-box {
-  max-width: 400px;
-  margin: auto;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
-
-.quiz-box select,
-.quiz-box button {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-}
-
-.quiz-box button {
-  background: #ff7b00;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
+  margin-top: 10px;
+  color: #ccc;
 }
 
 /* CONTACT */
 .contact {
-  background: #222;
-  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  background: #0f0f0f;
+}
+
+.contact a {
+  color: #39ff14;
+  text-decoration: none;
 }
 
 footer {
-  background: #111;
-  color: white;
-  padding: 15px;
+  text-align: center;
+  padding: 20px;
+  color: #666;
 }
 
 /* RESPONSIVE */
@@ -158,137 +147,83 @@ footer {
   .hero h1 {
     font-size: 28px;
   }
-
-  .hero p {
-    font-size: 14px;
-  }
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
+<div class="nav">
+  <div class="logo">AYG TRAVEL</div>
+</div>
+
 <!-- HERO -->
 <div class="hero">
-
-  <div class="ticker">
-    <span>
-      ✈️ Explore Armenia • 🏔️ Mountain Adventures • 🏛️ Culture Tours • 🚐 Private Trips • 🌅 Hidden Gems with Aug Travel •
-    </span>
-  </div>
-
-  <h1>Explore Armenia with Aug Travel</h1>
-  <p>Guided tours, adventures & unforgettable experiences</p>
-
-  <a href="#quiz" class="btn">Find Your Tour</a>
-  <a href="#destinations" class="btn">View Destinations</a>
-
+  <h1>Explore Armenia with AYG Travel</h1>
+  <p>
+    Discover breathtaking landscapes, ancient monasteries, and unforgettable cultural adventures across Armenia.
+  </p>
+  <a href="#contact" class="btn">Apply Now</a>
 </div>
 
 <!-- ABOUT -->
 <section>
-<h2>About Us</h2>
-<p>Aug Travel offers unforgettable tours across Armenia with local guides, nature adventures and cultural experiences.</p>
+  <h2>About AYG Travel</h2>
+  <p class="about">
+    AYG Travel is a modern travel experience platform focused on exploring the beauty of Armenia.
+    We connect travelers with guided tours, cultural heritage sites, and nature adventures.
+    Our mission is to deliver unforgettable journeys with comfort and authenticity.
+  </p>
 </section>
 
-<!-- SERVICES -->
+<!-- BENEFITS -->
 <section>
-<h2>What We Offer</h2>
-<div class="grid">
-  <div class="box">🚐 Private Tours</div>
-  <div class="box">🏔️ Mountain Trips</div>
-  <div class="box">🏛️ Cultural Tours</div>
-  <div class="box">✈️ Transfers</div>
-  <div class="box">🏨 Hotels</div>
-  <div class="box">🗺️ Custom Trips</div>
-</div>
+  <h2>What You Will Experience</h2>
+
+  <div class="grid">
+    <div class="card">🏔️ Mountain adventures in Dilijan & Tatev</div>
+    <div class="card">🏛️ Ancient monasteries like Geghard & Khor Virap</div>
+    <div class="card">🌊 Relaxing trips to Lake Sevan</div>
+    <div class="card">🚐 Comfortable guided transport</div>
+    <div class="card">📸 Instagram-worthy travel spots</div>
+    <div class="card">🧭 Local expert tour guides</div>
+  </div>
 </section>
 
 <!-- DESTINATIONS -->
-<section id="destinations">
-<h2>Top Destinations</h2>
-
-<div class="destinations">
+<section>
+  <h2>Famous Places in Armenia</h2>
 
   <div class="dest">
     <img src="https://images.unsplash.com/photo-1590005354167-6da97870c757">
-    <p>Lake Sevan</p>
+    <p>Lake Sevan — the largest lake in Armenia, known for its blue water and peaceful views.</p>
   </div>
 
   <div class="dest">
     <img src="https://images.unsplash.com/photo-1589308078053-8328f0a0c6b3">
-    <p>Tatev Monastery</p>
+    <p>Tatev Monastery — historic site located on a dramatic cliff with stunning views.</p>
   </div>
 
   <div class="dest">
     <img src="https://images.unsplash.com/photo-1608032077016-9f4a7c8f4c34">
-    <p>Garni Temple</p>
+    <p>Garni Temple — ancient Greek-style temple surrounded by mountains.</p>
   </div>
 
-  <div class="dest">
-    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
-    <p>Armenian Mountains</p>
-  </div>
-
-</div>
-</section>
-
-<!-- QUIZ -->
-<section class="quiz" id="quiz">
-<h2>Find Your Perfect Tour</h2>
-
-<div class="quiz-box">
-
-  <select id="budget">
-    <option value="low">Under $100</option>
-    <option value="mid">$100 - $300</option>
-    <option value="high">$300+</option>
-  </select>
-
-  <select id="interest">
-    <option value="nature">Nature</option>
-    <option value="culture">Culture</option>
-    <option value="relax">Relax</option>
-  </select>
-
-  <button onclick="showTour()">Show My Tour</button>
-
-  <h3 id="result"></h3>
-
-</div>
 </section>
 
 <!-- CONTACT -->
-<section class="contact">
-<h2>Contact Us</h2>
-<p>Email: info@augtravel.com</p>
-<p>Phone: +374 XX XXX XXX</p>
+<section class="contact" id="contact">
+  <h2>Contact & Instagram</h2>
+  <p>DM us on Instagram for bookings and tours</p>
+  <p><a href="#">@aygtravel</a></p>
+  <p>Email: info@aygtravel.com</p>
 </section>
 
+<!-- FOOTER -->
 <footer>
-<p>© 2026 Aug Travel</p>
+  © 2026 AYG Travel. All rights reserved.
 </footer>
-
-<script>
-function showTour() {
-  let budget = document.getElementById("budget").value;
-  let interest = document.getElementById("interest").value;
-
-  let price = "";
-  let tour = "";
-
-  if (budget == "low") price = "$50 - $90";
-  if (budget == "mid") price = "$100 - $250";
-  if (budget == "high") price = "$300 - $600";
-
-  if (interest == "nature") tour = "Mountain & Lake Tour";
-  if (interest == "culture") tour = "Cultural Monasteries Tour";
-  if (interest == "relax") tour = "City Relax Tour";
-
-  document.getElementById("result").innerHTML =
-    tour + " | Price: " + price;
-}
-</script>
 
 </body>
 </html>
