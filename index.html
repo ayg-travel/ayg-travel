@@ -19,7 +19,7 @@ body {
   line-height: 1.6;
 }
 
-/* NAV */
+/* HEADER */
 header {
   padding: 20px 10%;
   display: flex;
@@ -47,9 +47,8 @@ nav a:hover {
 /* HERO */
 .hero {
   text-align: center;
-  padding: 120px 20px;
+  padding: 110px 20px;
   background: linear-gradient(135deg, #0b1220, #111b33);
-  overflow: hidden;
 }
 
 .hero h1 {
@@ -66,8 +65,7 @@ nav a:hover {
 
 /* RUNNING LINE */
 .marquee {
-  margin: 25px auto;
-  width: 100%;
+  margin: 20px auto;
   overflow: hidden;
   white-space: nowrap;
   border-top: 1px solid rgba(255,255,255,0.1);
@@ -78,19 +76,14 @@ nav a:hover {
 .marquee span {
   display: inline-block;
   padding-left: 100%;
-  animation: scroll 12s linear infinite;
+  animation: scroll 14s linear infinite;
   color: #4fd1c5;
   font-weight: bold;
-  letter-spacing: 1px;
 }
 
 @keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
 }
 
 /* BUTTON */
@@ -122,22 +115,23 @@ section {
   color: #4fd1c5;
 }
 
+/* ABOUT */
 .about p {
   max-width: 800px;
   opacity: 0.85;
 }
 
-/* BENEFITS */
+/* GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  margin-top: 30px;
 }
 
+/* CARD */
 .card {
   background: #111b33;
-  padding: 25px;
+  padding: 20px;
   border-radius: 12px;
   transition: 0.3s;
   border: 1px solid rgba(255,255,255,0.05);
@@ -146,6 +140,30 @@ section {
 .card:hover {
   transform: translateY(-5px);
   border-color: #4fd1c5;
+}
+
+/* TOURS IMAGES */
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* TESTIMONIALS */
+.testimonial img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 2px solid #4fd1c5;
+}
+
+.testimonial p {
+  font-size: 14px;
+  opacity: 0.85;
 }
 
 /* CONTACT */
@@ -159,6 +177,7 @@ section {
   font-weight: bold;
 }
 
+/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
@@ -168,18 +187,8 @@ footer {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 32px;
-  }
-
-  header {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  nav a {
-    margin: 0 10px;
-  }
+  .hero h1 { font-size: 32px; }
+  header { flex-direction: column; gap: 10px; }
 }
 </style>
 </head>
@@ -190,7 +199,8 @@ footer {
   <div class="logo">Ayg Travel</div>
   <nav>
     <a href="#about">About</a>
-    <a href="#benefits">Benefits</a>
+    <a href="#tours">Tours</a>
+    <a href="#reviews">Reviews</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -200,62 +210,100 @@ footer {
   <h1>Explore the World with Confidence</h1>
 
   <div class="marquee">
-    <span>✈️ Affordable Travel • 🌍 Global Destinations • 🧳 Student-Friendly Packages • 🏝️ Adventure Awaits • ✈️ Explore More with Ayg Travel • </span>
+    <span>✈️ Europe Tours • 🌍 Asia Adventures • 🏝️ Island Trips • 🧳 Student Travel Deals • 💙 People Love Ayg Travel • </span>
   </div>
 
-  <p>Ayg Travel helps you discover unforgettable journeys, curated travel experiences, and seamless planning for students and explorers.</p>
+  <p>
+    Ayg Travel helps you discover unforgettable journeys, curated travel experiences, and seamless planning for students and explorers.
+  </p>
 
-  <a href="#contact" class="btn">Apply Now</a>
+  <!-- APPLY BUTTON -->
+  <a href="https://www.instagram.com" class="btn" target="_blank">
+    Apply Now
+  </a>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="about">
+<section id="about">
   <h2 class="section-title">About Ayg Travel</h2>
   <p>
-    Ayg Travel is a modern travel agency focused on creating meaningful travel experiences.
-    We help students and young explorers travel smarter, cheaper, and safer.
-    Our mission is to connect people with cultures, opportunities, and unforgettable destinations around the world.
+    Ayg Travel is a modern travel agency helping students and travelers explore the world with affordable, safe, and well-planned journeys.
+    We focus on unforgettable experiences and global opportunities.
   </p>
 </section>
 
-<!-- BENEFITS -->
-<section id="benefits">
-  <h2 class="section-title">What You’ll Get</h2>
+<!-- TOURS -->
+<section id="tours">
+  <h2 class="section-title">Our Tours</h2>
+
   <div class="grid">
 
     <div class="card">
-      <h3>Smart Travel Planning</h3>
-      <p>Learn how to plan trips efficiently, saving time and money while maximizing experience.</p>
+      <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34" />
+      <h3>Paris Explorer</h3>
+      <p>Discover the magic of Paris with guided city tours and Eiffel Tower views.</p>
     </div>
 
     <div class="card">
-      <h3>Budget-Friendly Trips</h3>
-      <p>Discover how to travel the world on a student budget without compromising comfort.</p>
+      <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad" />
+      <h3>Dubai Luxury Trip</h3>
+      <p>Experience skyscrapers, desert safaris, and luxury shopping in Dubai.</p>
     </div>
 
     <div class="card">
-      <h3>Global Opportunities</h3>
-      <p>Access international programs, exchanges, and cultural experiences.</p>
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" />
+      <h3>Maldives Escape</h3>
+      <p>Relax in crystal-clear waters and luxury beach resorts.</p>
     </div>
 
     <div class="card">
-      <h3>24/7 Support</h3>
-      <p>Get assistance anytime during your travel journey for a stress-free experience.</p>
+      <img src="https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef" />
+      <h3>New York City Tour</h3>
+      <p>Explore Times Square, Central Park, and the Statue of Liberty.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <h2 class="section-title">People Love It 💙</h2>
+
+  <div class="grid">
+
+    <div class="card testimonial">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" />
+      <h3>Anna</h3>
+      <p>“Best travel experience ever! Everything was smooth and perfectly organized.”</p>
+    </div>
+
+    <div class="card testimonial">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg" />
+      <h3>David</h3>
+      <p>“Affordable and professional service. I loved my trip to Europe!”</p>
+    </div>
+
+    <div class="card testimonial">
+      <img src="https://randomuser.me/api/portraits/women/68.jpg" />
+      <h3>Sophia</h3>
+      <p>“Highly recommended! Ayg Travel made my dream vacation possible.”</p>
     </div>
 
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="contact">
-  <h2 class="section-title">Get in Touch</h2>
-  <p>Follow us on Instagram or contact us for travel opportunities.</p>
+<section id="contact">
+  <h2 class="section-title">Contact & Instagram</h2>
+  <p>Follow us and apply for travel opportunities.</p>
 
   <p style="margin-top:10px;">
-    Instagram: <a href="#">@aygtravel</a>
+    Instagram: <a href="https://www.instagram.com" target="_blank">@aygtravel</a>
   </p>
 
-  <a href="#" class="btn" style="margin-top:20px;">Apply Now</a>
+  <a href="https://www.instagram.com" class="btn" target="_blank" style="margin-top:20px;">
+    Apply Now
+  </a>
 </section>
 
 <footer>
