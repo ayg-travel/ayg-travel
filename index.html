@@ -49,6 +49,7 @@ nav a:hover {
   text-align: center;
   padding: 120px 20px;
   background: linear-gradient(135deg, #0b1220, #111b33);
+  overflow: hidden;
 }
 
 .hero h1 {
@@ -58,11 +59,41 @@ nav a:hover {
 
 .hero p {
   font-size: 18px;
-  max-width: 600px;
+  max-width: 650px;
   margin: auto;
   opacity: 0.8;
 }
 
+/* RUNNING LINE */
+.marquee {
+  margin: 25px auto;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding: 10px 0;
+}
+
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll 12s linear infinite;
+  color: #4fd1c5;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* BUTTON */
 .btn {
   margin-top: 25px;
   display: inline-block;
@@ -167,7 +198,13 @@ footer {
 <!-- HERO -->
 <section class="hero">
   <h1>Explore the World with Confidence</h1>
+
+  <div class="marquee">
+    <span>✈️ Affordable Travel • 🌍 Global Destinations • 🧳 Student-Friendly Packages • 🏝️ Adventure Awaits • ✈️ Explore More with Ayg Travel • </span>
+  </div>
+
   <p>Ayg Travel helps you discover unforgettable journeys, curated travel experiences, and seamless planning for students and explorers.</p>
+
   <a href="#contact" class="btn">Apply Now</a>
 </section>
 
@@ -213,6 +250,7 @@ footer {
 <section id="contact" class="contact">
   <h2 class="section-title">Get in Touch</h2>
   <p>Follow us on Instagram or contact us for travel opportunities.</p>
+
   <p style="margin-top:10px;">
     Instagram: <a href="#">@aygtravel</a>
   </p>
