@@ -1,79 +1,266 @@
-/* HERO RESPONSIVE */
-.hero {
-  height: 100vh;
-  background: url('https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a') center/cover no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  padding: 20px;
-  position: relative;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aug Travel - Explore Armenia</title>
 
-/* Running ticker */
-.ticker {
-  position: absolute;
-  top: 15px;
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  background: rgba(0,0,0,0.4);
-  padding: 10px 0;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-.ticker-text {
-  display: inline-block;
-  padding-left: 100%;
-  animation: scrollText 18s linear infinite;
-  font-size: 14px;
-}
+    body {
+      line-height: 1.6;
+      color: #333;
+    }
 
-@keyframes scrollText {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
+    /* HERO SECTION */
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+      position: relative;
+    }
 
-/* HERO TEXT */
-.hero h1 {
-  font-size: 50px;
-  margin-bottom: 15px;
-}
+    /* RUNNING TICKER */
+    .ticker {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      background: rgba(0,0,0,0.5);
+      padding: 10px 0;
+    }
 
-.hero p {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
+    .ticker-text {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scrollText 18s linear infinite;
+      font-size: 14px;
+      color: #fff;
+    }
 
-/* BUTTONS */
-.hero-buttons {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+    @keyframes scrollText {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-100%); }
+    }
 
-/* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 32px;
-  }
+    .hero h1 {
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
 
-  .hero p {
-    font-size: 16px;
-  }
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
 
-  .ticker-text {
-    font-size: 12px;
-  }
+    .hero-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-  .btn {
-    padding: 10px 16px;
-    font-size: 14px;
-  }
-}
+    .btn {
+      background: #ff7b00;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #e66900;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 32px;
+    }
+
+    /* SERVICES */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .service-box {
+      background: #f4f4f4;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    /* DESTINATIONS */
+    .destinations {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .dest {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .dest img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .dest p {
+      padding: 10px;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: #222;
+      color: white;
+    }
+
+    .contact p {
+      margin: 10px 0;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .ticker-text {
+        font-size: 12px;
+      }
+
+      .btn {
+        padding: 10px 16px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+
+    <!-- RUNNING LINE -->
+    <div class="ticker">
+      <div class="ticker-text">
+        ✈️ Explore Armenia’s hidden gems • 🏔️ Mountain adventures • 🏛️ Cultural heritage tours • 🚐 Private & group travel • 🌅 Unforgettable experiences with Aug Travel •
+      </div>
+    </div>
+
+    <h1>Explore Armenia with Aug Travel</h1>
+    <p>Guided tours, adventures & unforgettable experiences</p>
+
+    <div class="hero-buttons">
+      <a href="#contact" class="btn">Book a Tour</a>
+      <a href="#destinations" class="btn">View Packages</a>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section>
+    <h2>About Us</h2>
+    <p>
+      Aug Travel is a local travel agency offering guided tours across Armenia.
+      We create unforgettable experiences through culture, history, and nature adventures.
+    </p>
+  </section>
+
+  <!-- SERVICES -->
+  <section>
+    <h2>What We Offer</h2>
+    <div class="services">
+      <div class="service-box">🚐 Private & Group Tours</div>
+      <div class="service-box">🏔️ Mountain Adventures</div>
+      <div class="service-box">🏛️ Cultural Tours</div>
+      <div class="service-box">✈️ Airport Transfers</div>
+      <div class="service-box">🏨 Hotel Booking</div>
+      <div class="service-box">🗺️ Custom Trips</div>
+    </div>
+  </section>
+
+  <!-- DESTINATIONS -->
+  <section id="destinations">
+    <h2>Top Destinations</h2>
+    <div class="destinations">
+
+      <div class="dest">
+        <img src="https://images.unsplash.com/photo-1590005354167-6da97870c757" />
+        <p>Lake Sevan</p>
+      </div>
+
+      <div class="dest">
+        <img src="https://images.unsplash.com/photo-1589308078053-8328f0a0c6b3" />
+        <p>Tatev Monastery</p>
+      </div>
+
+      <div class="dest">
+        <img src="https://images.unsplash.com/photo-1608032077016-9f4a7c8f4c34" />
+        <p>Garni Temple</p>
+      </div>
+
+      <div class="dest">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" />
+        <p>Armenian Mountains</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Plan your trip with Aug Travel today!</p>
+    <p>Email: info@augtravel.com</p>
+    <p>Phone: +374 XX XXX XXX</p>
+  </section>
+
+  <footer>
+    <p>© 2026 Aug Travel. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
