@@ -1,445 +1,449 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ayg Travel</title>
 
 <style>
+
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial, sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
 }
 
 body{
-  background:#0b1220;
-  color:#fff;
-  line-height:1.6;
-  overflow-x:hidden;
+    background:#0b1220;
+    color:white;
+    overflow-x:hidden;
 }
 
 /* HEADER */
+
 header{
-  padding:18px 8%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  background:#08101d;
-  position:sticky;
-  top:0;
-  z-index:1000;
-  border-bottom:1px solid rgba(255,255,255,0.05);
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:#08101d;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
 /* LOGO */
-.logo-container{
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
 
-.logo-container img{
-  width:60px;
-  height:60px;
-  border-radius:50%;
-  object-fit:cover;
-  background:white;
-}
-
-.logo-text{
-  font-size:24px;
-  font-weight:bold;
-  color:#4fd1c5;
+.logo img{
+    width:80px;
+    height:80px;
+    object-fit:cover;
+    border-radius:50%;
+    background:white;
 }
 
 /* NAVIGATION */
+
 nav a{
-  color:#fff;
-  margin-left:20px;
-  text-decoration:none;
-  font-size:16px;
-  transition:0.3s;
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-size:16px;
+    transition:0.3s;
 }
 
 nav a:hover{
-  color:#4fd1c5;
+    color:#4fd1c5;
 }
 
 /* RUNNING TEXT */
+
 .marquee{
-  width:100%;
-  overflow:hidden;
-  white-space:nowrap;
-  background:#4fd1c5;
-  color:#08101d;
-  padding:12px 0;
-  font-weight:bold;
-  font-size:18px;
+    width:100%;
+    overflow:hidden;
+    white-space:nowrap;
+    background:#4fd1c5;
+    color:#08101d;
+    padding:12px 0;
+    font-weight:bold;
+    font-size:18px;
 }
 
 .marquee span{
-  display:inline-block;
-  padding-left:100%;
-  animation:marquee 18s linear infinite;
+    display:inline-block;
+    padding-left:100%;
+    animation:marquee 16s linear infinite;
 }
 
 @keyframes marquee{
-  0%{
-    transform:translateX(0);
-  }
-  100%{
-    transform:translateX(-100%);
-  }
+    0%{
+        transform:translateX(0);
+    }
+
+    100%{
+        transform:translateX(-100%);
+    }
 }
 
 /* HERO */
+
 .hero{
-  text-align:center;
-  padding:120px 20px;
-  background:linear-gradient(135deg,#0b1220,#111b33);
+    text-align:center;
+    padding:120px 20px;
+    background:linear-gradient(135deg,#0b1220,#111b33);
 }
 
 .hero h1{
-  font-size:58px;
-  margin-bottom:20px;
+    font-size:58px;
+    margin-bottom:20px;
 }
 
 .hero p{
-  max-width:750px;
-  margin:auto;
-  opacity:0.85;
-  font-size:18px;
+    max-width:750px;
+    margin:auto;
+    font-size:18px;
+    opacity:0.85;
 }
 
-/* BUTTON */
 .btn{
-  display:inline-block;
-  margin-top:30px;
-  padding:14px 34px;
-  background:#4fd1c5;
-  color:#0b1220;
-  text-decoration:none;
-  border-radius:8px;
-  font-weight:bold;
-  transition:0.3s;
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 34px;
+    background:#4fd1c5;
+    color:#08101d;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.3s;
 }
 
 .btn:hover{
-  background:#38b2ac;
-  transform:translateY(-2px);
+    background:#38b2ac;
+    transform:translateY(-2px);
 }
 
 /* SECTIONS */
+
 section{
-  padding:80px 10%;
+    padding:80px 10%;
 }
 
 .section-title{
-  font-size:36px;
-  margin-bottom:25px;
-  color:#4fd1c5;
+    font-size:36px;
+    margin-bottom:25px;
+    color:#4fd1c5;
 }
 
 /* ABOUT */
+
 .about p{
-  max-width:850px;
-  opacity:0.85;
-  font-size:17px;
+    max-width:850px;
+    opacity:0.85;
+    line-height:1.8;
 }
 
-/* DROPDOWN STYLE */
+/* DESTINATIONS */
+
 details{
-  background:#111b33;
-  margin-bottom:18px;
-  border-radius:14px;
-  padding:18px;
-  cursor:pointer;
-  border:1px solid rgba(255,255,255,0.05);
-  transition:0.3s;
+    background:#111b33;
+    margin-bottom:18px;
+    border-radius:14px;
+    padding:18px;
+    border:1px solid rgba(255,255,255,0.05);
+    transition:0.3s;
 }
 
 details:hover{
-  border-color:#4fd1c5;
+    border-color:#4fd1c5;
 }
 
 summary{
-  font-size:20px;
-  font-weight:bold;
-  color:#4fd1c5;
-  cursor:pointer;
+    font-size:20px;
+    font-weight:bold;
+    color:#4fd1c5;
+    cursor:pointer;
 }
 
 .hotel{
-  margin-top:15px;
-  padding:15px;
-  background:#0f1a30;
-  border-radius:10px;
+    margin-top:15px;
+    padding:15px;
+    background:#0f1a30;
+    border-radius:10px;
 }
 
 .hotel h3{
-  margin-bottom:8px;
+    margin-bottom:8px;
 }
 
 .price{
-  color:#4fd1c5;
-  font-weight:bold;
-  margin-top:8px;
-  font-size:18px;
+    color:#4fd1c5;
+    font-size:18px;
+    font-weight:bold;
+    margin-top:8px;
 }
 
 /* REVIEWS */
+
 .review{
-  background:#111b33;
-  padding:20px;
-  border-radius:14px;
-  margin-bottom:18px;
-  border:1px solid rgba(255,255,255,0.05);
+    background:#111b33;
+    padding:20px;
+    border-radius:14px;
+    margin-bottom:18px;
+    border:1px solid rgba(255,255,255,0.05);
 }
 
 .review h3{
-  margin-bottom:10px;
-  color:#4fd1c5;
+    color:#4fd1c5;
+    margin-bottom:10px;
 }
 
 .review p{
-  opacity:0.85;
+    opacity:0.85;
 }
 
 /* CONTACT */
+
 .contact{
-  text-align:center;
+    text-align:center;
 }
 
 .contact p{
-  margin-bottom:20px;
-  font-size:18px;
-}
-
-.contact a{
-  color:#4fd1c5;
-  font-weight:bold;
-  text-decoration:none;
+    margin-bottom:20px;
+    font-size:18px;
 }
 
 /* FOOTER */
+
 footer{
-  text-align:center;
-  padding:25px;
-  background:#08101d;
-  color:#aaa;
-  margin-top:50px;
+    text-align:center;
+    padding:25px;
+    background:#08101d;
+    color:#aaa;
 }
 
 /* MOBILE */
+
 @media(max-width:768px){
 
-  header{
-    flex-direction:column;
-    gap:15px;
-  }
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
 
-  nav{
-    text-align:center;
-  }
+    nav{
+        text-align:center;
+    }
 
-  nav a{
-    margin:0 10px;
-  }
+    nav a{
+        margin:0 10px;
+    }
 
-  .hero h1{
-    font-size:40px;
-  }
+    .hero h1{
+        font-size:40px;
+    }
 
-  .hero p{
-    font-size:16px;
-  }
+    .hero p{
+        font-size:16px;
+    }
 
-  .logo-container img{
-    width:50px;
-    height:50px;
-  }
+    .logo img{
+        width:65px;
+        height:65px;
+    }
+
 }
+
 </style>
 </head>
 
 <body>
 
 <!-- HEADER -->
+
 <header>
 
-  <div class="logo-container">
+    <!-- LOGO -->
+    <div class="logo">
 
-    <!-- ADD YOUR LOGO IMAGE HERE -->
-    <img src="logo.png" alt="Ayg Travel Logo">
+        <!-- PUT YOUR IMAGE NAME HERE -->
+        <img src="logo.png" alt="Ayg Travel Logo">
 
-    <div class="logo-text">Ayg Travel</div>
+    </div>
 
-  </div>
-
-  <nav>
-    <a href="#about">About</a>
-    <a href="#tours">Destinations</a>
-    <a href="#reviews">Reviews</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <!-- MENU -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#tours">Destinations</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
 </header>
 
 <!-- RUNNING TEXT -->
+
 <div class="marquee">
-  <span>
-    Explore the World with Confidence ✈️ • Luxury travel experiences • Student-friendly prices • Unforgettable journeys across the globe 🌍
-  </span>
+    <span>
+        ✈️ Explore the World with Confidence • Luxury travel experiences • Student-friendly prices • Unforgettable journeys across the globe 🌍
+    </span>
 </div>
 
-<!-- HERO -->
+<!-- HERO SECTION -->
+
 <section class="hero">
 
-  <h1>Explore the World with Confidence</h1>
+    <h1>Explore the World with Confidence</h1>
 
-  <p>
-    Luxury travel experiences, student-friendly prices,
-    and unforgettable journeys across the globe.
-  </p>
+    <p>
+        Luxury travel experiences, student-friendly prices,
+        and unforgettable journeys across the globe.
+    </p>
 
-  <a href="https://www.instagram.com" class="btn" target="_blank">
-    Apply Now
-  </a>
+    <a href="https://www.instagram.com" class="btn" target="_blank">
+        Apply Now
+    </a>
 
 </section>
 
 <!-- ABOUT -->
+
 <section id="about" class="about">
 
-  <h2 class="section-title">About Ayg Travel</h2>
+    <h2 class="section-title">About Ayg Travel</h2>
 
-  <p>
-    Ayg Travel is a modern travel agency dedicated to creating premium
-    travel experiences for students, families, and explorers.
-    We specialize in affordable luxury trips, hotel bookings,
-    and curated international tours.
-    Our mission is to make world travel simple, safe, and unforgettable.
-    We partner with top hotels worldwide to ensure comfort,
-    quality, and the best pricing for every traveler.
-  </p>
+    <p>
+        Ayg Travel is a modern travel agency dedicated to creating premium travel experiences
+        for students, families, and explorers.
+        We specialize in affordable luxury trips, hotel bookings,
+        and curated international tours.
+        Our mission is to make world travel simple, safe, and unforgettable.
+        We partner with top hotels worldwide to ensure comfort,
+        quality, and the best pricing for every traveler.
+    </p>
 
 </section>
 
 <!-- DESTINATIONS -->
+
 <section id="tours">
 
-  <h2 class="section-title">Choose Your Destination</h2>
+    <h2 class="section-title">Choose Your Destination</h2>
 
-  <!-- PARIS -->
-  <details>
+    <!-- PARIS -->
 
-    <summary>Paris, France 🇫🇷</summary>
+    <details>
 
-    <div class="hotel">
-      <h3>4★ Hotel Package</h3>
-      <p>City center hotel + breakfast + Eiffel Tower tour</p>
-      <p class="price">$799</p>
-    </div>
+        <summary>Paris, France 🇫🇷</summary>
 
-    <div class="hotel">
-      <h3>5★ Luxury Hotel</h3>
-      <p>Premium view hotel + spa + VIP city tours</p>
-      <p class="price">$1299</p>
-    </div>
+        <div class="hotel">
+            <h3>4★ Hotel Package</h3>
+            <p>City center hotel + breakfast + Eiffel Tower tour</p>
+            <p class="price">$799</p>
+        </div>
 
-  </details>
+        <div class="hotel">
+            <h3>5★ Luxury Hotel</h3>
+            <p>Premium view hotel + spa + VIP city tours</p>
+            <p class="price">$1299</p>
+        </div>
 
-  <!-- DUBAI -->
-  <details>
+    </details>
 
-    <summary>Dubai, UAE 🇦🇪</summary>
+    <!-- DUBAI -->
 
-    <div class="hotel">
-      <h3>4★ Hotel Package</h3>
-      <p>Downtown stay + desert safari + breakfast</p>
-      <p class="price">$999</p>
-    </div>
+    <details>
 
-    <div class="hotel">
-      <h3>5★ Luxury Burj Hotel</h3>
-      <p>Burj Khalifa view + VIP luxury services</p>
-      <p class="price">$1799</p>
-    </div>
+        <summary>Dubai, UAE 🇦🇪</summary>
 
-  </details>
+        <div class="hotel">
+            <h3>4★ Hotel Package</h3>
+            <p>Downtown stay + desert safari + breakfast</p>
+            <p class="price">$999</p>
+        </div>
 
-  <!-- MALDIVES -->
-  <details>
+        <div class="hotel">
+            <h3>5★ Luxury Burj Hotel</h3>
+            <p>Burj Khalifa view + VIP luxury services</p>
+            <p class="price">$1799</p>
+        </div>
 
-    <summary>Maldives 🏝️</summary>
+    </details>
 
-    <div class="hotel">
-      <h3>4★ Beach Resort</h3>
-      <p>Ocean view resort + breakfast + island tours</p>
-      <p class="price">$1099</p>
-    </div>
+    <!-- MALDIVES -->
 
-    <div class="hotel">
-      <h3>5★ Private Villa</h3>
-      <p>Private water villa + infinity pool + luxury spa</p>
-      <p class="price">$2499</p>
-    </div>
+    <details>
 
-  </details>
+        <summary>Maldives 🏝️</summary>
+
+        <div class="hotel">
+            <h3>4★ Beach Resort</h3>
+            <p>Ocean view resort + breakfast + island tours</p>
+            <p class="price">$1099</p>
+        </div>
+
+        <div class="hotel">
+            <h3>5★ Private Villa</h3>
+            <p>Private water villa + infinity pool + luxury spa</p>
+            <p class="price">$2499</p>
+        </div>
+
+    </details>
 
 </section>
 
 <!-- REVIEWS -->
+
 <section id="reviews">
 
-  <h2 class="section-title">What People Say</h2>
+    <h2 class="section-title">What People Say</h2>
 
-  <div class="review">
-    <h3>Anna</h3>
-    <p>
-      “Amazing experience! Everything was well organized
-      and very professional.”
-    </p>
-  </div>
+    <div class="review">
+        <h3>Anna</h3>
+        <p>
+            “Amazing experience! Everything was well organized
+            and very professional.”
+        </p>
+    </div>
 
-  <div class="review">
-    <h3>David</h3>
-    <p>
-      “Best travel agency I’ve used.
-      Affordable and high quality service.”
-    </p>
-  </div>
+    <div class="review">
+        <h3>David</h3>
+        <p>
+            “Best travel agency I’ve used.
+            Affordable and high quality service.”
+        </p>
+    </div>
 
-  <div class="review">
-    <h3>Sophia</h3>
-    <p>
-      “The hotels were perfect and the trip was unforgettable!”
-    </p>
-  </div>
+    <div class="review">
+        <h3>Sophia</h3>
+        <p>
+            “The hotels were perfect and the trip was unforgettable!”
+        </p>
+    </div>
 
 </section>
 
 <!-- CONTACT -->
+
 <section id="contact" class="contact">
 
-  <h2 class="section-title">Contact Us</h2>
+    <h2 class="section-title">Contact Us</h2>
 
-  <p>Instagram: @aygtravel</p>
+    <p>Instagram: @aygtravel</p>
 
-  <a class="btn" href="https://www.instagram.com" target="_blank">
-    Apply Now
-  </a>
+    <a class="btn" href="https://www.instagram.com" target="_blank">
+        Apply Now
+    </a>
 
 </section>
 
 <!-- FOOTER -->
+
 <footer>
-  © 2025 Ayg Travel — All Rights Reserved
+    © 2025 Ayg Travel — All Rights Reserved
 </footer>
 
 </body>
 </html>
-```
