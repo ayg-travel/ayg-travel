@@ -5,13 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ayg Travel</title>
 
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
 }
 
 body{
@@ -24,34 +28,48 @@ body{
 
 header{
     width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    background:rgba(8,16,29,0.95);
+    backdrop-filter:blur(10px);
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:18px 8%;
-    background:#08101d;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    border-bottom:1px solid rgba(255,255,255,0.05);
+    padding:15px 8%;
+    border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
 /* LOGO */
 
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
 .logo img{
-    width:80px;
-    height:80px;
-    object-fit:cover;
+    width:75px;
+    height:75px;
     border-radius:50%;
+    object-fit:cover;
     background:white;
+}
+
+.logo h2{
+    color:#4fd1c5;
+    font-size:24px;
+    font-weight:700;
 }
 
 /* NAVIGATION */
 
 nav a{
-    color:white;
     text-decoration:none;
-    margin-left:20px;
-    font-size:16px;
+    color:white;
+    margin-left:22px;
+    font-size:15px;
     transition:0.3s;
 }
 
@@ -62,27 +80,27 @@ nav a:hover{
 /* RUNNING TEXT */
 
 .marquee{
+    margin-top:105px;
     width:100%;
     overflow:hidden;
     white-space:nowrap;
     background:#4fd1c5;
     color:#08101d;
     padding:12px 0;
-    font-weight:bold;
-    font-size:18px;
+    font-weight:600;
+    font-size:17px;
 }
 
 .marquee span{
     display:inline-block;
     padding-left:100%;
-    animation:marquee 16s linear infinite;
+    animation:marquee 18s linear infinite;
 }
 
 @keyframes marquee{
     0%{
         transform:translateX(0);
     }
-
     100%{
         transform:translateX(-100%);
     }
@@ -91,137 +109,213 @@ nav a:hover{
 /* HERO */
 
 .hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+    url('https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     text-align:center;
-    padding:120px 20px;
-    background:linear-gradient(135deg,#0b1220,#111b33);
+    padding:20px;
+}
+
+.hero-content{
+    max-width:850px;
 }
 
 .hero h1{
-    font-size:58px;
+    font-size:68px;
     margin-bottom:20px;
+    line-height:1.1;
 }
 
 .hero p{
-    max-width:750px;
-    margin:auto;
-    font-size:18px;
-    opacity:0.85;
+    font-size:20px;
+    opacity:0.9;
+    margin-bottom:35px;
 }
 
 .btn{
     display:inline-block;
-    margin-top:30px;
-    padding:14px 34px;
+    padding:15px 38px;
     background:#4fd1c5;
     color:#08101d;
     text-decoration:none;
     border-radius:8px;
-    font-weight:bold;
+    font-weight:600;
     transition:0.3s;
 }
 
 .btn:hover{
     background:#38b2ac;
-    transform:translateY(-2px);
+    transform:translateY(-3px);
 }
 
 /* SECTIONS */
 
 section{
-    padding:80px 10%;
+    padding:90px 10%;
 }
 
 .section-title{
-    font-size:36px;
-    margin-bottom:25px;
+    text-align:center;
+    font-size:42px;
     color:#4fd1c5;
+    margin-bottom:50px;
 }
 
 /* ABOUT */
 
-.about p{
-    max-width:850px;
+.about-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:40px;
+    align-items:center;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:20px;
+}
+
+.about-text p{
+    line-height:1.9;
     opacity:0.85;
-    line-height:1.8;
+    font-size:17px;
 }
 
 /* DESTINATIONS */
 
-details{
+.destinations{
+    background:#10192c;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
     background:#111b33;
-    margin-bottom:18px;
-    border-radius:14px;
-    padding:18px;
+    border-radius:18px;
+    overflow:hidden;
+    transition:0.4s;
     border:1px solid rgba(255,255,255,0.05);
-    transition:0.3s;
 }
 
-details:hover{
-    border-color:#4fd1c5;
+.card:hover{
+    transform:translateY(-8px);
 }
 
-summary{
-    font-size:20px;
-    font-weight:bold;
+.card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:22px;
+}
+
+.card-content h3{
+    margin-bottom:12px;
     color:#4fd1c5;
-    cursor:pointer;
-}
-
-.hotel{
-    margin-top:15px;
-    padding:15px;
-    background:#0f1a30;
-    border-radius:10px;
-}
-
-.hotel h3{
-    margin-bottom:8px;
 }
 
 .price{
     color:#4fd1c5;
-    font-size:18px;
-    font-weight:bold;
-    margin-top:8px;
+    font-size:22px;
+    font-weight:700;
+    margin-top:10px;
+}
+
+/* WHY CHOOSE US */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.feature{
+    background:#111b33;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.feature:hover{
+    transform:translateY(-5px);
+}
+
+.feature h3{
+    color:#4fd1c5;
+    margin-bottom:15px;
 }
 
 /* REVIEWS */
 
+.reviews{
+    background:#10192c;
+}
+
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
 .review{
     background:#111b33;
-    padding:20px;
-    border-radius:14px;
-    margin-bottom:18px;
-    border:1px solid rgba(255,255,255,0.05);
+    padding:28px;
+    border-radius:18px;
 }
 
 .review h3{
     color:#4fd1c5;
-    margin-bottom:10px;
-}
-
-.review p{
-    opacity:0.85;
+    margin-bottom:12px;
 }
 
 /* CONTACT */
 
-.contact{
-    text-align:center;
+.contact-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:40px;
 }
 
-.contact p{
-    margin-bottom:20px;
-    font-size:18px;
+.contact-box{
+    background:#111b33;
+    padding:30px;
+    border-radius:18px;
+}
+
+.contact-box h3{
+    color:#4fd1c5;
+    margin-bottom:15px;
+}
+
+.contact-box p{
+    margin-bottom:12px;
+    opacity:0.9;
 }
 
 /* FOOTER */
 
 footer{
-    text-align:center;
-    padding:25px;
     background:#08101d;
-    color:#aaa;
+    text-align:center;
+    padding:30px 20px;
+    border-top:1px solid rgba(255,255,255,0.05);
+}
+
+footer p{
+    opacity:0.7;
 }
 
 /* MOBILE */
@@ -231,6 +325,7 @@ footer{
     header{
         flex-direction:column;
         gap:15px;
+        padding:15px;
     }
 
     nav{
@@ -238,20 +333,29 @@ footer{
     }
 
     nav a{
-        margin:0 10px;
+        margin:0 8px;
+        font-size:14px;
+    }
+
+    .marquee{
+        margin-top:150px;
     }
 
     .hero h1{
-        font-size:40px;
+        font-size:42px;
     }
 
     .hero p{
         font-size:16px;
     }
 
+    .section-title{
+        font-size:34px;
+    }
+
     .logo img{
-        width:65px;
-        height:65px;
+        width:60px;
+        height:60px;
     }
 
 }
@@ -265,18 +369,19 @@ footer{
 
 <header>
 
-    <!-- LOGO -->
     <div class="logo">
 
-        <!-- PUT YOUR IMAGE NAME HERE -->
+        <!-- YOUR LOGO -->
         <img src="logo.png" alt="Ayg Travel Logo">
+
+        <h2>Ayg Travel</h2>
 
     </div>
 
-    <!-- MENU -->
     <nav>
         <a href="#about">About</a>
-        <a href="#tours">Destinations</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#why">Why Us</a>
         <a href="#reviews">Reviews</a>
         <a href="#contact">Contact</a>
     </nav>
@@ -291,158 +396,288 @@ footer{
     </span>
 </div>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 
 <section class="hero">
 
-    <h1>Explore the World with Confidence</h1>
+    <div class="hero-content">
 
-    <p>
-        Luxury travel experiences, student-friendly prices,
-        and unforgettable journeys across the globe.
-    </p>
+        <h1>Discover Beautiful Places Around The World</h1>
 
-    <a href="https://www.instagram.com" class="btn" target="_blank">
-        Apply Now
-    </a>
+        <p>
+            Ayg Travel creates unforgettable travel experiences with luxury comfort,
+            affordable prices, and 24/7 support during your entire journey.
+        </p>
+
+        <a href="#contact" class="btn">Book Your Journey</a>
+
+    </div>
 
 </section>
 
 <!-- ABOUT -->
 
-<section id="about" class="about">
+<section id="about">
 
-    <h2 class="section-title">About Ayg Travel</h2>
+    <h2 class="section-title">About Us</h2>
 
-    <p>
-        Ayg Travel is a modern travel agency dedicated to creating premium travel experiences
-        for students, families, and explorers.
-        We specialize in affordable luxury trips, hotel bookings,
-        and curated international tours.
-        Our mission is to make world travel simple, safe, and unforgettable.
-        We partner with top hotels worldwide to ensure comfort,
-        quality, and the best pricing for every traveler.
-    </p>
+    <div class="about-container">
+
+        <div class="about-image">
+
+            <img src="https://images.pexels.com/photos/346885/pexels-photo-346885.jpeg">
+
+        </div>
+
+        <div class="about-text">
+
+            <p>
+                Ayg Travel is a modern travel agency focused on premium experiences,
+                affordable packages, and unforgettable adventures.
+                We organize luxury vacations, student-friendly tours,
+                family trips, and international journeys to the world's most beautiful destinations.
+            </p>
+
+            <br>
+
+            <p>
+                Our team stays connected with you during your entire flight and journey,
+                ensuring your safety, comfort, and confidence wherever you travel.
+                We believe every traveler deserves a stress-free and memorable experience.
+            </p>
+
+        </div>
+
+    </div>
 
 </section>
 
 <!-- DESTINATIONS -->
 
-<section id="tours">
+<section id="destinations" class="destinations">
 
-    <h2 class="section-title">Choose Your Destination</h2>
+    <h2 class="section-title">Popular Destinations</h2>
 
-    <!-- PARIS -->
+    <div class="cards">
 
-    <details>
+        <!-- PARIS -->
 
-        <summary>Paris, France 🇫🇷</summary>
+        <div class="card">
 
-        <div class="hotel">
-            <h3>4★ Hotel Package</h3>
-            <p>City center hotel + breakfast + Eiffel Tower tour</p>
-            <p class="price">$799</p>
+            <img src="https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg">
+
+            <div class="card-content">
+
+                <h3>Paris, France 🇫🇷</h3>
+
+                <p>
+                    Experience luxury hotels, Eiffel Tower tours,
+                    romantic city nights, and unforgettable memories.
+                </p>
+
+                <div class="price">$799</div>
+
+            </div>
+
         </div>
 
-        <div class="hotel">
-            <h3>5★ Luxury Hotel</h3>
-            <p>Premium view hotel + spa + VIP city tours</p>
-            <p class="price">$1299</p>
+        <!-- DUBAI -->
+
+        <div class="card">
+
+            <img src="https://images.pexels.com/photos/2044434/pexels-photo-2044434.jpeg">
+
+            <div class="card-content">
+
+                <h3>Dubai, UAE 🇦🇪</h3>
+
+                <p>
+                    Luxury shopping, Burj Khalifa views,
+                    desert safari adventures, and VIP experiences.
+                </p>
+
+                <div class="price">$999</div>
+
+            </div>
+
         </div>
 
-    </details>
+        <!-- MALDIVES -->
 
-    <!-- DUBAI -->
+        <div class="card">
 
-    <details>
+            <img src="https://images.pexels.com/photos/1287460/pexels-photo-1287460.jpeg">
 
-        <summary>Dubai, UAE 🇦🇪</summary>
+            <div class="card-content">
 
-        <div class="hotel">
-            <h3>4★ Hotel Package</h3>
-            <p>Downtown stay + desert safari + breakfast</p>
-            <p class="price">$999</p>
+                <h3>Maldives 🏝️</h3>
+
+                <p>
+                    Private villas, ocean paradise views,
+                    luxury spas, and relaxing island escapes.
+                </p>
+
+                <div class="price">$1299</div>
+
+            </div>
+
         </div>
 
-        <div class="hotel">
-            <h3>5★ Luxury Burj Hotel</h3>
-            <p>Burj Khalifa view + VIP luxury services</p>
-            <p class="price">$1799</p>
+    </div>
+
+</section>
+
+<!-- WHY CHOOSE US -->
+
+<section id="why">
+
+    <h2 class="section-title">Why Choose Ayg Travel?</h2>
+
+    <div class="features">
+
+        <div class="feature">
+
+            <h3>24/7 Support</h3>
+
+            <p>
+                We stay connected with you during your entire flight and journey
+                to ensure safety and comfort.
+            </p>
+
         </div>
 
-    </details>
+        <div class="feature">
 
-    <!-- MALDIVES -->
+            <h3>Luxury Experiences</h3>
 
-    <details>
+            <p>
+                Premium hotels, unforgettable destinations,
+                and world-class travel experiences.
+            </p>
 
-        <summary>Maldives 🏝️</summary>
-
-        <div class="hotel">
-            <h3>4★ Beach Resort</h3>
-            <p>Ocean view resort + breakfast + island tours</p>
-            <p class="price">$1099</p>
         </div>
 
-        <div class="hotel">
-            <h3>5★ Private Villa</h3>
-            <p>Private water villa + infinity pool + luxury spa</p>
-            <p class="price">$2499</p>
+        <div class="feature">
+
+            <h3>Affordable Prices</h3>
+
+            <p>
+                Student-friendly and family-friendly packages
+                with the best travel deals available.
+            </p>
+
         </div>
 
-    </details>
+        <div class="feature">
+
+            <h3>Trusted Agency</h3>
+
+            <p>
+                Professional service, trusted travel partners,
+                and excellent customer satisfaction.
+            </p>
+
+        </div>
+
+    </div>
 
 </section>
 
 <!-- REVIEWS -->
 
-<section id="reviews">
+<section id="reviews" class="reviews">
 
-    <h2 class="section-title">What People Say</h2>
+    <h2 class="section-title">Customer Reviews</h2>
 
-    <div class="review">
-        <h3>Anna</h3>
-        <p>
-            “Amazing experience! Everything was well organized
-            and very professional.”
-        </p>
-    </div>
+    <div class="review-grid">
 
-    <div class="review">
-        <h3>David</h3>
-        <p>
-            “Best travel agency I’ve used.
-            Affordable and high quality service.”
-        </p>
-    </div>
+        <div class="review">
 
-    <div class="review">
-        <h3>Sophia</h3>
-        <p>
-            “The hotels were perfect and the trip was unforgettable!”
-        </p>
+            <h3>Anna</h3>
+
+            <p>
+                “Amazing service and unforgettable experience.
+                The team helped us during the entire trip.”
+            </p>
+
+        </div>
+
+        <div class="review">
+
+            <h3>David</h3>
+
+            <p>
+                “Best travel agency I’ve ever used.
+                Professional, affordable, and luxury service.”
+            </p>
+
+        </div>
+
+        <div class="review">
+
+            <h3>Sophia</h3>
+
+            <p>
+                “Everything was perfect — flights, hotels,
+                and communication throughout the journey.”
+            </p>
+
+        </div>
+
     </div>
 
 </section>
 
 <!-- CONTACT -->
 
-<section id="contact" class="contact">
+<section id="contact">
 
-    <h2 class="section-title">Contact Us</h2>
+    <h2 class="section-title">Contact Ayg Travel</h2>
 
-    <p>Instagram: @aygtravel</p>
+    <div class="contact-container">
 
-    <a class="btn" href="https://www.instagram.com" target="_blank">
-        Apply Now
-    </a>
+        <div class="contact-box">
+
+            <h3>Office Address</h3>
+
+            <p>📍 Ayg Travel Agency</p>
+            <p>21 Luxury Avenue</p>
+            <p>London, United Kingdom</p>
+
+        </div>
+
+        <div class="contact-box">
+
+            <h3>Contact Information</h3>
+
+            <p>📞 +44 7700 900000</p>
+            <p>✉️ aygtravel@gmail.com</p>
+            <p>📷 Instagram: @aygtravel</p>
+
+        </div>
+
+        <div class="contact-box">
+
+            <h3>Business Hours</h3>
+
+            <p>Monday - Friday: 9AM - 8PM</p>
+            <p>Saturday: 10AM - 6PM</p>
+            <p>Sunday: Online Support Only</p>
+
+        </div>
+
+    </div>
 
 </section>
 
 <!-- FOOTER -->
 
 <footer>
-    © 2025 Ayg Travel — All Rights Reserved
+
+    <p>
+        © 2025 Ayg Travel — Luxury Travel Experiences Worldwide
+    </p>
+
 </footer>
 
 </body>
